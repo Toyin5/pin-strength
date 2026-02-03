@@ -3,7 +3,7 @@ import { PinRule } from "../types";
 export const repeatedPatternRule: PinRule = {
   name: "repeated-pattern",
   penalty: 25,
-  reason: "Repeated digit pattern detected",
+  reason: "Repeated pattern detected",
   check(pin: string): boolean {
     if (pin.length % 2 !== 0) return false;
 
