@@ -4,8 +4,15 @@
   "description": "A lightweight PIN strength checker with explainable rules",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
-  "keywords": ["pin", "security", "authentication", "password"],
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "pin",
+    "security",
+    "authentication",
+    "password"
+  ],
   "author": "Toyin5",
   "license": "MIT",
   "repository": {
@@ -15,5 +22,10 @@
   "scripts": {
     "build": "tsc",
     "test": "vitest run"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
   }
 }
