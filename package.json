@@ -1,6 +1,6 @@
 {
   "name": "pin-strength",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight PIN strength checker with explainable rules",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
