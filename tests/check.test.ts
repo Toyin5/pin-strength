@@ -90,4 +90,13 @@ describe("checkPinStrength", () => {
     expect(result.score).toBeGreaterThanOrEqual(0);
     expect(result.score).toBeLessThanOrEqual(100);
   });
+
+  it("never returns negative score even with many penalties", () => {
+    const result = checkPinStrength("0000", {
+      minLength: 10,
+      blacklist: ["0000"],
+    });
+
+    expect(result.score).toBeGreaterThanOrEqual(0);
+  });
 });
