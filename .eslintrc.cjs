@@ -10,5 +10,13 @@ module.exports = {
     node: true,
     es2021: true
   },
-  ignorePatterns: ["dist"]
+  ignorePatterns: ["dist"],
+  overrides: [
+    {
+      files: ["tests/**/*.ts"],
+      env: {
+        jest: true
+      }
+    }
+  ]
 };
