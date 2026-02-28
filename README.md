@@ -71,7 +71,7 @@ Calculates the strength of a given PIN.
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
-| `minLength` | `number` | `4` | Minimum required length of the PIN/ |
+| `minLength` | `number` | `4` | Minimum required length of the PIN. |
 | `blacklist` | `string[]` | `[]` | Array of forbidden PINs. |
 | `allowSequential` | `boolean` | `false` | (Not strictly enforced by interface, but used in logic if applicable) |
 
