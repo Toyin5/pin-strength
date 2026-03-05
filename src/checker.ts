@@ -6,6 +6,7 @@ import { sequentialRule } from "./rules/sequential.rule";
 import { palindromeRule } from "./rules/palindrome.rule";
 import { repeatedPatternRule } from "./rules/repeatedPattern.rule";
 import { blacklistRule } from "./rules/blacklist.rule";
+import { keypadRule } from "./rules/keypad.rule";
 
 const RULES: PinRule[] = [
   lengthRule,
@@ -13,12 +14,13 @@ const RULES: PinRule[] = [
   sequentialRule,
   palindromeRule,
   repeatedPatternRule,
-  blacklistRule
+  blacklistRule,
+  keypadRule,
 ];
 
 export function checkPinStrength(
   pin: string,
-  options: PinOptions = {}
+  options: PinOptions = {},
 ): PinResult {
   if (!/^\d+$/.test(pin)) {
     throw new Error("PIN must contain digits only");
@@ -37,9 +39,7 @@ export function checkPinStrength(
   score = Math.max(0, Math.min(100, score));
 
   const strength: PinStrength =
-    score < 40 ? "weak" :
-    score < 70 ? "medium" :
-    "strong";
+    score < 40 ? "weak" : score < 70 ? "medium" : "strong";
 
   return { score, strength, reasons };
 }
